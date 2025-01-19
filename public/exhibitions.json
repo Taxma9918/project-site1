@@ -1,0 +1,10 @@
+{
+    "current": [
+        { "name": "The Moroccan Journey", "location": "Louvre Museum", "date": "2025-03-15" },
+        { "name": "Romantic Masterpieces", "location": "National Gallery", "date": "2025-05-01" }
+    ],
+    "past": [
+        { "name": "Revolutionary Art", "location": "Metropolitan Museum", "date": "2022-11-10" },
+        { "name": "Delacroix and the Orient", "location": "Orsay Museum", "date": "2021-09-25" }
+    ]
+}

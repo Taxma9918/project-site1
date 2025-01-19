@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Διαδικτυακή Εφαρμογή Ευγένιου Ντελακρουά</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Διαδικτυακή Εφαρμογή Ζωγράφου</h1>
+    </header>
+    <nav class="top-menu">
+        <ul>
+            <li><button onclick="selectMenu('bio')">Βιογραφία</button></li>
+            <li><button onclick="selectMenu('paintings')">Πίνακες</button></li>
+            <li><button onclick="selectMenu('exhibitions')">Εκθέσεις</button></li>
+            <li><button onclick="selectMenu('links')">Σύνδεσμοι</button></li>
+            <li><button onclick="selectMenu('admin')">Διαχείριση</button></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside>
+            <div id="bio-menu" class="submenu hidden">
+                <h3>Βιογραφία</h3>
+                <p>Επιλέξτε κατηγορία...
+                <ul>
+                   <li><button onclick="showBiographySection('birth')">Γέννηση</button></li>
+                   <li><button onclick="showBiographySection('career')">Έργα</button></li>
+                 </ul>
+            </div>
+            <div id="paintings-menu" class="submenu hidden">
+                <h3>Κατηγορίες Πινάκων</h3>
+                <ul>
+                    <li><button onclick="showPaintings('landscapes')">Τοπία</button></li>
+                    <li><button onclick="showPaintings('portraits')">Πορτρέτα</button></li>
+                </ul>
+            </div>
+            <div id="exhibitions-menu" class="submenu hidden">
+                <h3>Εκθέσεις</h3>
+                <p>Επιλέξτε κατηγορία...</p>
+                <ul>
+                    <li><button onclick="showExhibitions('current')">Τρέχουσες Εκθέσεις</button></li>
+                    <li><button onclick="showExhibitions('past')">Παρελθούσες Εκθέσεις</button></li>
+                </ul>
+            </div>
+            <div id="links-menu" class="submenu hidden">
+                <h3>Σύνδεσμοι</h3>
+                <p>Επιλέξτε κατηγορία...</p>
+                <ul>
+                    <li><button onclick="showLinks('web_links')">Διαδικτυακοί Σύνδεσμοι</button></li>
+                    <li><button onclick="showLinks('bibliography')">Βιβλιογραφία</button></li>
+                </ul>
+            </div>
+            <div id="user-loggedin" class="hidden">
+                <p>Καλωσήρθατε, χρήστη!</p>
+                <button onclick="logout()">Αποσύνδεση</button>
+            </div>
+            
+            <div id="admin-menu" class="submenu">
+                <h3>Διαχείριση</h3>
+                <div id="admin-login" class="login-section">
+                    <h4>Σύνδεση Χρήστη</h4>
+                    <form id="login-form">
+                        <label for="username">Όνομα Χρήστη:</label>
+                        <input type="text" id="username" required>
+                        <label for="password">Κωδικός:</label>
+                        <input type="password" id="password" required>
+                        <button type="submit">Σύνδεση</button>
+                    </form>
+                </div>
+            
+                <div id="admin-loggedin" class="hidden admin-section">
+                    <h4>Καλωσήρθατε, Διαχειριστή!</h4>
+                    <button onclick="logout()">Αποσύνδεση</button>
+                    <button onclick="manageExhibitions()">Διαχείριση Εκθέσεων</button>
+                    <button onclick="manageLinks()">Διαχείριση Συνδέσμων</button>
+                </div>
+            
+                <div id="user-loggedin" class="hidden user-section">
+                    <h4>Καλωσήρθατε, Χρήστη!</h4>
+                    <button onclick="logout()">Αποσύνδεση</button>
+                </div>
+            </div>
+            
+            
+        </aside>
+        <main id="main-content">
+            <p>Καλωσορίσατε! Επιλέξτε μια επιλογή από το μενού.</p>
+        </main>
+    </div>
+    <footer>
+        <p>Copyright © 2025</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

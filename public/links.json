@@ -1,0 +1,10 @@
+{
+    "web_links": [
+        { "name": "Wikipedia", "url": "https://www.wikipedia.org" },
+        { "name": "Art Museum", "url": "https://www.artmuseum.com" }
+    ],
+    "bibliography": [
+        { "name": "The Art of Delacroix", "author": "John Smith" },
+        { "name": "Romanticism and Revolution", "author": "Emily Johnson" }
+    ]
+}
